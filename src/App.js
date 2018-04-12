@@ -185,12 +185,56 @@ search by value if you have object .
 */
 const findingMilk=(...item)=>{
  
-  if(item.lastIndexOfindexOf('milk')){
-    item.push('milk')
+  if(item.lastIndexOf('milk')){
+   return ['milk',...item]
   }
   return item
 }
 console.log(findingMilk('orange','bule'))
+
+console.log('-------------------------------------------')
+console.log('Destructuring')
+const Data ={
+  name:'meher',
+  age:20
+}
+const { name } = Data
+const { age } = Data
+console.log(`name is ${name}`)
+console.log(`age is ${age}`)
+console.log('Exemple for Destructuring')
+
+let saveField = {
+  extention:'.jpg',
+  name:'book',
+  size:123654
+}
+function fileSummary (file){
+  const {name,extention,size} = file
+  return `the file ${name}.${extention} is of size ${size}` 
+}
+console.log(fileSummary(saveField))
+console.log('-------------------------------------------')
+console.log('Destructuring Arrays')
+const data1 = ['Facebook','Google','Yahoo','Quora','AirBinBe']
+const [ facebook,google,yahoo ,...rest] = data1
+console.log(facebook,google,yahoo,rest)
+console.log('-------------------------------------------')
+console.log('Exemple for Destructuring : Arrays of objects')
+
+const companies =[
+  {name:'Google',location:'America'},
+  {name:'Facebook',location:'San Fran'},
+  {name:'Quora',location:'Tunise'},
+]
+const [ { location } ]=companies
+console.log(location)
+console.log('Exemple for Destructuring :objects of Arrays')
+const compnay={
+  locations:['France','Tunis','Turky']
+}
+const { locations:[location1,location2]} = compnay
+console.log(location1,location2)
 return (
       <div className="App">
        
