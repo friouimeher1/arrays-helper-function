@@ -1,0 +1,37 @@
+.Container {
+  width: 500px; }
+  .Container .TabContent .CompanyInfo {
+    margin: 10px;
+    border-bottom: 1px solid #8f8a8a; }
+    .Container .TabContent .CompanyInfo .InfoHeader {
+      display: flex; }
+      .Container .TabContent .CompanyInfo .InfoHeader .Logo {
+        width: 35%;
+        margin: 10px;
+        margin-right: 0px; }
+      .Container .TabContent .CompanyInfo .InfoHeader .Info h4 {
+        font-weight: bold; }
+      .Container .TabContent .CompanyInfo .InfoHeader .Info h5 {
+        color: #887d7d; }
+    .Container .TabContent .CompanyInfo .InfoFooter {
+      color: #887d7d;
+      display: flex;
+      justify-content: space-around; }
+  .Container .TabContent .DashBoard {
+    margin: 10px;
+    border-bottom: 1px solid #8f8a8a; }
+    .Container .TabContent .DashBoard .Calender {
+      margin: 10px;
+      display: flex;
+      justify-content: space-between; }
+    .Container .TabContent .DashBoard .ImageDashboard {
+      width: 100%; }
+  .Container .TabContent .DataSummary {
+    margin: 10px; }
+    .Container .TabContent .DataSummary h3 {
+      color: #7070dd; }
+    .Container .TabContent .DataSummary .tableRouting {
+      display: flex;
+      justify-content: space-between; }
+      .Container .TabContent .DataSummary .tableRouting p {
+        color: #887d7d; }

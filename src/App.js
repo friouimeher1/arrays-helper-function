@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class App extends Component {
   render() {
     const computers =[
@@ -105,11 +104,72 @@ if(isBalanced===0){
 }
 
 
+console.log('-------------------------------------------')
+console.log('Template String')
+
+let getMessage=()=>{
+ const year = Date()
+ return `The year = ${year}`
+}
+console.log(getMessage())
+
+console.log('-------------------------------------------')
+console.log('Enhanced (improve) Object Literal')
+
+const data=[
+  {title:'book',price:20},
+  {title:'pen',price:22},
+  {title:'paper',price:15},
+]
+
+const totalPrice = data.reduce((p,d)=>{
+    return p+=d.price
+} ,0)
+
+console.log(totalPrice)
+
+console.log('-------------------------------------------')
+console.log('Default function argument')
+/* Exemple */
+function makeAjaxReques(url,method){
+  if(!method){
+    method='GET'
+  }
+  console.log('url : ',url,' , Method : ',method)
+}
+makeAjaxReques('google.com')
+makeAjaxReques('google.com',"PUT")
+console.log('-------------------------------------------')
+console.log('Complex for Default function argument')
+
+function User(id){
+  this.id=id
+}
+
+function generateId(){
+  return (Math.floor(Math.random()*9))
+}
+function createAdminUser(user=new User(generateId())){
+  user.admin=true
+  return user
+}
+let user = new User(generateId())
+console.log(createAdminUser(user))
+console.log(createAdminUser(user))
+console.log(createAdminUser(user))
 
 
+console.log('-------------------------------------------')
+console.log('Rest and Spread Operator')
+/* the purpose is to write less code */
 
+function addNumbers(numbers){
+  return numbers.reduce((sum,number)=>{
+    return sum+number
+  },0)
+}
 
-
+console.log(addNumbers([1,2,3,4]))
 
     return (
       <div className="App">
