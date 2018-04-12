@@ -235,6 +235,17 @@ const compnay={
 }
 const { locations:[location1,location2]} = compnay
 console.log(location1,location2)
+console.log('Exemple for Destructuring :Arrays of Arrays')
+const dataArrays =[
+  [1,2],
+  [3,4],
+  [5,6],
+]
+const arraysOfArrays =dataArrays.map(([x,y])=>{
+  return { x,y }
+  // return { x:x,y:y }
+})
+console.log(arraysOfArrays)
 return (
       <div className="App">
        
