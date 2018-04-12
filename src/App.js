@@ -163,15 +163,35 @@ console.log('-------------------------------------------')
 console.log('Rest and Spread Operator')
 /* the purpose is to write less code */
 
-function addNumbers(numbers){
+function addNumbers(...numbers){
   return numbers.reduce((sum,number)=>{
     return sum+number
   },0)
 }
-
-console.log(addNumbers([1,2,3,4]))
-
-    return (
+/* ...numbers :this represent arrays of numbers caputre all the arrgument passed into a function*/
+console.log(addNumbers(1,2,3))
+console.log('-------------------------------------------')
+console.log('Spread Operator')
+const defaultColors =['red','green']
+const UsersFavoriteColors =['orange','yellow']
+/* concatenate this two arrays*/
+const dataColors= [...defaultColors,...UsersFavoriteColors]
+console.log(dataColors)
+/*
+renvoie le premier indice pour lequel on trouve un élément 
+donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, 
+la méthode renverra -1. 
+search by value if you have object .
+*/
+const findingMilk=(...item)=>{
+ 
+  if(item.lastIndexOfindexOf('milk')){
+    item.push('milk')
+  }
+  return item
+}
+console.log(findingMilk('orange','bule'))
+return (
       <div className="App">
        
       </div>
