@@ -312,13 +312,30 @@ generator delegation
 console.log('-------------------------------------------')
 console.log('Exemple of Generators')
 function* a(){
-yield
+yield //it is a keywords add by es6
 }
-const gen = a()
-console.log(gen.next())
-console.log(gen.next())
-console.log(gen.next())
-console.log(a())
+console.log('-------------------------------------------')
+console.log('Promises and Fetch')
+/*
+what is the problem that Promises comes to solove !
+exemple
+const url =google.com
+let data =ajaxRequext(url)
+console.log(data)//here the data is define ,but why ! because you don't know how many time take this request
+Promises :come to solve this problem that take time because in javascript the ligne code exectue ligne by ligne
+and never wait the response to above ligne or simple no pauss
+*/
+console.log('Terminology of Promises')
+/*
+  there are 3 state of Promises :******************> unresolved :mean waiting for something to finish
+                                :*****************> resolved :something finished and it all went Ok
+                                :******************> rejected :something finished and somehting went bad
+
+
+          :--------------> Everything wored out *********>(status:resolved)***********>(callback:then)
+-Promise
+          :--------------> something bad happned*********>(status:rejected)***********>(callback:catch)
+  */
 return (
       <div className="App">
 
