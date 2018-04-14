@@ -14,7 +14,7 @@ for (var i=0;i<computers.length;i++){
 }
 console.log('-------------------------------------------')
 console.log('using forEach Function Helper')
-  let sum = 0  
+  let sum = 0
 computers.forEach((computer)=>{
    sum+=computer.ram
 })
@@ -178,13 +178,13 @@ const UsersFavoriteColors =['orange','yellow']
 const dataColors= [...defaultColors,...UsersFavoriteColors]
 console.log(dataColors)
 /*
-renvoie le premier indice pour lequel on trouve un élément 
-donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, 
-la méthode renverra -1. 
+renvoie le premier indice pour lequel on trouve un élément
+donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau,
+la méthode renverra -1.
 search by value if you have object .
 */
 const findingMilk=(...item)=>{
- 
+
   if(item.lastIndexOf('milk')){
    return ['milk',...item]
   }
@@ -211,7 +211,7 @@ let saveField = {
 }
 function fileSummary (file){
   const {name,extention,size} = file
-  return `the file ${name}.${extention} is of size ${size}` 
+  return `the file ${name}.${extention} is of size ${size}`
 }
 console.log(fileSummary(saveField))
 console.log('-------------------------------------------')
@@ -226,8 +226,14 @@ const companies =[
   {name:'Google',location:'America'},
   {name:'Facebook',location:'San Fran'},
   {name:'Quora',location:'Tunise'},
+
 ]
+console.log(companies.map((company,index)=>{
+  return ('here',company)
+}))
+
 const [ { location } ]=companies
+
 console.log(location)
 console.log('Exemple for Destructuring :objects of Arrays')
 const compnay={
@@ -246,9 +252,18 @@ const arraysOfArrays =dataArrays.map(([x,y])=>{
   // return { x:x,y:y }
 })
 console.log(arraysOfArrays)
+console.log('-------------------------------------------')
+console.log('Section how to use Class')
+class Car{
+  drive(){
+    return 'vromm'
+  }
+}
+let car = new Car()
+console.log(car.drive())
 return (
       <div className="App">
-       
+
       </div>
     );
   }
