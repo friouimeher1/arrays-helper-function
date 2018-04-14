@@ -280,6 +280,45 @@ class Toyata extends Car{
 let tayouta = new Toyata({title:'BWV',color:'red'})
 console.log(tayouta.drive())
 console.log(tayouta)
+
+console.log('-------------------------------------------')
+console.log('Section how to use Generators')
+const colors=[
+  'red','green','blue'
+]
+for (let color of colors){
+  console.log(color)
+}
+//what is happen here is just iterate for each element in the arrays of colors
+console.log('-------------------------------------------')
+const arraysOfNumbers =[1,2,3,4]
+let sumArrays=0
+for (let i of arraysOfNumbers){
+  sumArrays+=i
+}
+console.log(sumArrays)
+console.log('-------------------------------------------')
+/*
+what is Generators !
+Generators :is function that can be entred and exit multiple time
+what does do  !
+iteration with generator !
+generator delegation
+
+*/
+// 1- Create Generator
+// there are two way function* nameFunction() or function *nameFunction make sure the start is present mean that
+//its a generator
+console.log('-------------------------------------------')
+console.log('Exemple of Generators')
+function* a(){
+yield
+}
+const gen = a()
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(a())
 return (
       <div className="App">
 
