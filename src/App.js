@@ -255,12 +255,31 @@ console.log(arraysOfArrays)
 console.log('-------------------------------------------')
 console.log('Section how to use Class')
 class Car{
+  constructor({ title }){
+    this.title=title
+  }
   drive(){
     return 'vromm'
   }
 }
-let car = new Car()
+let car = new Car({title:'BMV'})
+console.log(car)
 console.log(car.drive())
+console.log('-------------------------------------------')
+
+class Toyata extends Car{
+  constructor({title,color}){
+    super({title,color}) //Car.constructor
+    this.title=title
+    this.color=color
+  }
+  honck(){
+    return 'Honck'
+  }
+}
+let tayouta = new Toyata({title:'BWV',color:'red'})
+console.log(tayouta.drive())
+console.log(tayouta)
 return (
       <div className="App">
 
